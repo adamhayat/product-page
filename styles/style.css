@@ -1,0 +1,143 @@
+:root {
+    --color1: rgb(160,122,115);
+    --color2: rgb(229,174,115);
+    --color3: rgb(197,133,89);
+    --color4: rgb(90,60,51);
+    --color5: rgb(210,195,189);
+    --color6: rgb(60,60,60);
+
+
+}
+
+html {
+    font-family: 'Lato', sans-serif;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    font-size: 18px;
+    outline: none;
+}
+
+body {
+    background-color: var(--color5);
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 900;
+}
+
+
+/* TOP BAR format the bar on top of the page */
+#top-bar {
+    height: 60px;
+    background-color: var(--color4);
+}
+
+
+#promo-bar {
+    width: 60%;
+    height: 80px;
+    margin: auto;
+    background-color: var(--color1);
+    border-bottom-left-radius: 42%;
+    border-bottom-right-radius: 42%;
+    padding: 10px;
+    color: var(--color2);
+    font-size: 1.7em;
+    font-weight: 900;
+    text-align: center;
+}
+
+
+header {
+        overflow: auto;
+        padding: .5rem 2rem;
+    }
+
+
+/* LOGO STYLING */
+#header-img {
+width: 25rem;
+max-width: 70%;
+float: left;
+}
+
+#nav-bar {
+    float: right;
+}
+li {
+    list-style: none;
+    margin-top: 30px;
+    display: inline-block;
+    padding: 0 10px 0 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color4)
+}
+
+a:hover, a:active {
+    text-decoration: none;
+    color: var(--color3);
+    font-weight: 700;
+}
+
+#wtf-icon {
+color: red;
+}
+
+#order-icon {
+    color: blue;
+}
+
+#faq-icon {
+    color: purple;
+}
+
+#contact-icon {
+    color: green;
+}
+
+
+
+
+
+/* Mobile Navigation */
+/* LOGO STYLING */
+@media (min-width: 320px) and (max-width: 880px) {
+    header {
+        overflow: auto;
+        padding: 0;
+    }
+    #header-img {
+    width: 100vw;
+    max-width: 100%;
+    margin: auto;
+    float: none;
+    }
+    #nav-bar {
+        float: none;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        border-top: 2px solid var(--color1);
+        border-bottom: 2px solid var(--color1);
+        text-align: center;
+    }
+    li {
+        display: inline-block;
+        margin: 30px 0px 20px 0px;
+        padding: 0 3% 0 3%;
+        border-right: 2px solid var(--color1);
+        font-size: 22px;
+    }
+    li:last-child {
+        border: none;
+    }
+    #promo-bar {
+        font-size: 1.2em;
+    }
+}
