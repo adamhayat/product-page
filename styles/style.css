@@ -156,6 +156,46 @@ footer {
 
 }
 
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "footertop1 footertop2"
+        "footerbottom footerbottom";
+    gap: 10px 15px;
+    place-items: start center;
+    place-content: start start;
+}
+
+.footer-item-1 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: start;
+}
+
+.footer-item-2 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding: 33px 10px 10px 10px;
+}
+
+.footer-item-3 {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    padding: 60px 10px 10px 10px;
+}
+
+#paypal-icon, #mastercard-icon, #visa-icon, #applepay-icon, #amazonpay-icon {
+    color: var(--color4);
+    padding: 0px 20px 25px 0px;
+}
+
+#payment-group {
+    text-align: center;
+}
+
 .form-field {
     margin: 0px auto 10px auto;
     width: 21em;
@@ -189,6 +229,37 @@ footer {
 
 #newsletter {
     text-align: center;
+}
+
+
+#pricing {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+#pricing > div {
+    background-color: var(--color1);
+    padding: 20px;
+    margin: 0px 20px 20px 5px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px gray, 0 3px 3px gray;
+}
+
+#pricing > div:hover {
+    box-shadow: 0 8px 8px gray, 0 6px 6px gray;
+}
+
+#pricing1 {
+    flex-grow: 1;
+}
+
+#pricing2 {
+    flex-grow: 2;
+}
+
+#pricing3 {
+    flex-grow: 3;
 }
 
 
@@ -229,4 +300,54 @@ footer {
     #promo-bar {
         font-size: 1.2em;
     }
+    .footer-grid {
+        display: block;
+    }
+    .footer-item-1 {
+        margin: auto;
+    }
+    #payment-group {
+        padding: 30px 0;
+        margin: auto;
+        max-width: 55%
+    }
+    .footer-item-3 {
+        padding: 0;
+        text-align: center;
+        font-size: 1.3em;
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 768px) {
+    #pricing {
+        flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-device-width: 768px) {
+    .form-field {
+        padding: 30px;
+        width: 90%;
+        height: 90px;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        font-size: 3em;
+    }
+    #submit {
+        width: 70%;
+        height: 80px;
+        font-size: 2em;
+        border-radius: 20px;
+        margin-bottom: 40px;
+    }
+    #paypal-icon, #mastercard-icon, #visa-icon, #applepay-icon, #amazonpay-icon {
+        font-size: 120px;
+}
+#newsletter-heading {
+    font-size: 4em;
+}
+#pricing {
+    flex-wrap: wrap;
+}
 }
