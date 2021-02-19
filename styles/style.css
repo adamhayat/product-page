@@ -5,8 +5,6 @@
     --color4: rgb(90,60,51);
     --color5: rgb(210,195,189);
     --color6: rgb(60,60,60);
-
-
 }
 
 html {
@@ -21,35 +19,37 @@ body {
     margin: 0;
     padding: 0;
     overscroll-behavior: none;
+    color: black;
 }
 
 /* font options */
 h1 {
-    font-size: 3.2em;
+    font-size: 2.4em;
     font-weight: 900;
     text-align: center;
-    color: var(--color6);
+    padding: 0 15px;
 }
 
 h2 {
-    font-size: 2.5em;
+    font-size: 2.3em;
     font-weight: 900;
-    text-align: center;
-    color: var(--color6);
+    text-align: left;
+    margin-top: 60px;
     margin-bottom: 10px;
+    padding: 0 15px;
 }
 
 h3 {
     font-size: 1.8em;
     font-weight: 900;
-    text-align: center;
-    color: var(--color6);
+    text-align: left;
+    padding: 0 20px;
+    margin-bottom: 0;
 }
 
 #newsletter-heading {
     font-size: 1.9em;
     font-weight: 700;
-    color: black;
 }
 
 /* maple leaf color in the page h1 tag */
@@ -58,14 +58,28 @@ h3 {
 }
 
 .pics {
-    width: 30vw;
+    width: 38vw;
     height: auto;
+    display: inline-block;
+    border-radius: 10%;
+    filter: drop-shadow(0px 4px 8px rgba(0,0,0,.5));
+    box-shadow: 0 10px 20px var(--color4), 0 6px 6px var(--color4);
 }
 
-.photo {
-    width: 30vw;
-    height: auto;
-    object-fit: cover;
+.photo-gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+#pic1 {
+    transform: rotate(178deg)
+}
+
+#pic5 {
+    transform: rotate(2deg);
 }
 
 
@@ -89,6 +103,9 @@ h3 {
     font-weight: 900;
     text-align: center;
 }
+
+
+
 
 
 header {
@@ -147,10 +164,12 @@ color: red;
 #main-content {
     margin: auto;
     max-width: 1024px;
+    padding: 0 15px;
 }
 
 p {
     font-size: 1.7em;
+    padding: 0 20px;
 }
 
 
@@ -375,6 +394,29 @@ footer {
 }
 
 
+div#masonry {
+	flex-direction: row;
+	flex-wrap: wrap;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+    margin: auto;
+    width: 90vw;
+	height: 70vw;
+}
+div#masonry img { 
+	width: 33.3%;
+	transition: .8s opacity;
+}
+div#masonry:hover img {
+	opacity: 0.7;
+}
+div#masonry:hover img:hover {
+	opacity: 1;
+    transform: scale(1.1);
+}
+
+
 /* Mobile Navigation */
 /* LOGO STYLING */
 @media (max-width: 1024px) {
@@ -434,6 +476,26 @@ footer {
     #pricing {
         flex-wrap: wrap;
     }
+    .pics {
+        width: 80vw;
+        height: auto;
+    }
+    #pic1 {
+        display: none;
+    }
+    #pic5 {
+        transform: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pics {
+        width: 400px;
+    }
+    div#masonry {
+        width: 600px;
+        height: auto;
+        margin: auto;
 }
 
 @media only screen and (max-device-width: 768px) {
