@@ -50,6 +50,8 @@ h3 {
 #newsletter-heading {
     font-size: 1.9em;
     font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 /* maple leaf color in the page h1 tag */
@@ -408,12 +410,14 @@ footer {
     margin-left: 19px;
     font-size: 1.4em;
     font-weight: 700;
-    width: 14em;
+    width: 80vw;
+    max-width: 500px;
 }
 
 #contact-form > textarea {
     font-family: 'Lato', sans-serif;
-    width: 24em;
+    max-width: 500px;
+    width: 80vw;
     height: 6em;
 }
 
@@ -423,6 +427,26 @@ footer {
 
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 6em var(--color2) inset;
+}
+
+.form-button {
+display: block;
+padding: 14px;
+margin: 20px;
+margin-top: 8px;
+font-size: 2.2em;
+background-color: var(--color4);
+outline: none;
+border: none;
+border-radius: 6px;
+font-weight: 700;
+color: white;
+width: 80vw;
+max-width: 400px;
+}
+
+.form-button:hover {
+    background-color: var(--color3);
 }
 
 /* Mobile Navigation */
@@ -459,9 +483,6 @@ input:-webkit-autofill {
     li:last-child {
         border: none;
     }
-    #promo-bar {
-        font-size: 1.2em;
-    }
     .footer-grid {
         display: block;
     }
@@ -478,6 +499,9 @@ input:-webkit-autofill {
         text-align: center;
         font-size: 1.3em;
         opacity: 0.6;
+    }
+    #promo-bar {
+        font-size: 1.7em;
     }
 }
 
@@ -505,11 +529,15 @@ input:-webkit-autofill {
         width: 600px;
         height: auto;
         margin: auto;
+    }
 }
 
-@media only screen and (max-device-width: 768px) {
+@media only screen and (max-device-width: 1024px) {
+    h1 {
+        text-align: left;
+    }
     p, .pricing-button {
-        font-size: 2.7em;
+        font-size: 3em;
         padding: .5em 1em .5em 1em;
     }
 
@@ -517,7 +545,7 @@ input:-webkit-autofill {
         height: 4.5em;
         border-bottom-left-radius: 50%;
         border-bottom-right-radius: 50%;
-        font-size: 2.4em;
+        font-size: 2.7em;
     }
 
     #logo {
@@ -525,9 +553,7 @@ input:-webkit-autofill {
     }
 
     #nav-bar {
-        width: 100%;
-        font-size: 1.3em;
-        float: none;
+        font-size: 1.4em;
     }
 
     .pricing-top-bar {
@@ -546,6 +572,7 @@ input:-webkit-autofill {
         border-radius: 20px;
         font-size: 3em;
     }
+
     #submit {
         width: 70%;
         height: 80px;
@@ -553,18 +580,49 @@ input:-webkit-autofill {
         border-radius: 20px;
         margin-bottom: 40px;
     }
+
+    .pricing-button {
+        font-size: 4em;
+    }
+
     #paypal-icon, #mastercard-icon, #visa-icon, #applepay-icon, #amazonpay-icon {
         font-size: 120px;
-}
-#newsletter-heading {
-    font-size: 4em;
-}
-#pricing {
-    flex-wrap: wrap;
-}
-#pricing > div {
-    min-width: 500px;
-    margin: 0px 10px 50px 10px;
-}
-}
+    }
+
+    #newsletter-heading {
+        font-size: 4em;
+    }
+
+    #pricing {
+        flex-wrap: wrap;
+    }
+
+    #pricing > div {
+        min-width: 500px;
+        margin: 0px 10px 50px 10px;
+    }
+
+    #contact-form > input, #contact-form > #form-textarea {
+        max-width: none;
+        width: 86vw;
+        font-size: 3em;
+    }
+
+    #form-name {
+        max-width: none;
+        width: 92vw;
+    }
+
+    .form-button {
+        height: 3em;
+        max-width: none;
+        width: 92vw;
+        font-size: 3em;
+        border-radius: 12px;
+    }
+    
+    #submit {
+        font-size: 3em;
+        height: 3em;
+    }
 }
