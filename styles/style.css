@@ -24,7 +24,7 @@ body {
 
 /* font options */
 h1 {
-    font-size: 2.4em;
+    font-size: 3.5em;
     font-weight: 900;
     text-align: center;
     padding: 0 15px;
@@ -80,6 +80,10 @@ h3 {
 
 #pic5 {
     transform: rotate(2deg);
+}
+
+#pic1:hover, #pic5:hover, #pic5:focus, #pic1focus {
+    opacity: 0.9;
 }
 
 
@@ -216,9 +220,12 @@ footer {
 }
 
 #payment-group {
+    margin-top: 32px;
     text-align: center;
 }
 
+
+/* Newsletter */
 .form-field {
     margin: 0px auto 10px auto;
     width: 21em;
@@ -231,7 +238,7 @@ footer {
     outline: none;
 }
 
-.form-field:focus {
+.form-field:focus, .form-field:hover {
     background-color: var(--color2);
 } 
 
@@ -394,28 +401,29 @@ footer {
 }
 
 
-div#masonry {
-	flex-direction: row;
-	flex-wrap: wrap;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-    margin: auto;
-    width: 90vw;
-	height: 70vw;
-}
-div#masonry img { 
-	width: 33.3%;
-	transition: .8s opacity;
-}
-div#masonry:hover img {
-	opacity: 0.7;
-}
-div#masonry:hover img:hover {
-	opacity: 1;
-    transform: scale(1.1);
+
+/* Contact Form */
+#contact-form > input, #form-textarea {
+    background-color: var(--color3);
+    margin-left: 19px;
+    font-size: 1.4em;
+    font-weight: 700;
+    width: 14em;
 }
 
+#contact-form > textarea {
+    font-family: 'Lato', sans-serif;
+    width: 24em;
+    height: 6em;
+}
+
+#contact-form > input:hover, #form-textarea:hover {
+    background-color: var(--color2)
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 6em var(--color2) inset;
+}
 
 /* Mobile Navigation */
 /* LOGO STYLING */
@@ -432,6 +440,7 @@ div#masonry:hover img:hover {
     }
     #nav-bar {
         float: none;
+        font-size: .9em;
     }
     ul {
         margin: 0;
@@ -556,5 +565,6 @@ div#masonry:hover img:hover {
 #pricing > div {
     min-width: 500px;
     margin: 0px 10px 50px 10px;
+}
 }
 }
